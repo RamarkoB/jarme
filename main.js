@@ -1,0 +1,10 @@
+const inst = 
+    {"add": (x,y) => (x + y),
+     "sub": (x,y) => (x - y),
+     "mul": (x,y) => (x * y),
+     "and": (x,y) => (x & y),
+     "eor": (x,y) => (x ^ y),
+     "orr": (x,y) => (x | y),
+     "lsl": (x,y) => (x << y),
+     "lsr": (x,y) => (x >> y),
+     "movz": (x,y) => (x)}
