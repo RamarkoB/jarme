@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.row {
+  height:100%; 
+  padding: 0 12px
+}
+
+.col-4 {
+  height:100%; 
+  border-right:black solid 3px; 
+  padding: 10px; 
+  text-align: center;
+}
+
+.col-8 {
+  height:100%
+}
+
+.card {
+  border:black solid 2px!important; 
+  margin:auto; 
+  margin-bottom: 10px;
+}
+
+.card-top {
+  border-bottom: 2px solid black;
+}
+
+.card-bottom {
+  padding: 2px;
+}
