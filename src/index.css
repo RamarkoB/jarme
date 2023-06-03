@@ -41,3 +41,16 @@ code {
 .card-bottom {
   padding: 2px;
 }
+
+.side {
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.side::-webkit-scrollbar  {
+  display: none;
+}
