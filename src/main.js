@@ -1,11 +1,11 @@
 class State {
     constructor() {
-        this.regs = new Array(32).fill(0);
+        this.regs = new Array(33).fill(0);
         this.flags = {"n": false, "z": false, "c": false, "v":false}
     }
 
     setFlags(val) {
-        this.flags.z = (val == 0);
+        this.flags.z = (val === 0);
         this.flags.n = (val < 0);
     }
 
@@ -29,7 +29,7 @@ class State {
         if (tok[0].endsWith("is")) { mode = Mode.is; tok[0] = tok[0].slice(0, 3) }
         else if (tok[0].endsWith("i")) { mode = Mode.i; tok[0] = tok[0].slice(0, 3) }
         else if (tok[0].endsWith("s")) { mode = Mode.s; tok[0] = tok[0].slice(0, 3) }
-        else if (tok[0] == "movz") { mode = Mode.d }
+        else if (tok[0] === "movz") { mode = Mode.d }
 
         return this.execute(mode, tok[0], parseInt(tok[1]), parseInt(tok[2]), parseInt(tok[3]));
         //  
@@ -43,7 +43,7 @@ const Mode =
         "s": "Set Flags",
         "is": "Immediate and Set Flags",
         "d": "Direct"
-    }
+}
 
 const instSet = 
     {
@@ -56,6 +56,8 @@ const instSet =
         "lsl": (x,y) => (x << y),
         "lsr": (x,y) => (x >> y),
         "movz": (x) => (x)
-    }
+}
 
 const state = new State()
+
+export {State, Mode, instSet, state};
